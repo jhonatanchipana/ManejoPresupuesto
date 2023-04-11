@@ -330,7 +330,7 @@ namespace ManejoPresupuesto.Controllers
 
             if (cuenta is null) return RedirectToAction("NoEncontrado", "Home");
 
-            var categoria = await _repositorioCategorias.ObtenerPorId(modelo.CuentaId, usuarioId);
+            var categoria = await _repositorioCategorias.ObtenerPorId(modelo.CategoriaId, usuarioId);
 
             if (categoria is null) return RedirectToAction("NoEncontrado", "Home");
 

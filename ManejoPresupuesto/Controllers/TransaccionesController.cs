@@ -205,8 +205,8 @@ namespace ManejoPresupuesto.Controllers
         [HttpGet]
         public async Task<FileResult> ExportarExcelTodo()
         {
-            var fechaInicio = DateTime.Today.AddYears(-1000);
-            var fechaFin = DateTime.Today.AddYears(1000);
+            var fechaInicio = DateTime.Today.AddYears(-100);
+            var fechaFin = DateTime.Today.AddYears(500);
             var uusarioId = _servicioUsuarios.ObtenerUsuarioId();
 
             var transacciones = await _repositorioTransacciones.ObtenerPorUsuarioId(
